@@ -1,0 +1,22 @@
+<div class="container text-center mt-3">
+    <div class="mt-4 p-5 bg-transparent text-dark">
+        <h1>Nameless App</h1><br>
+        <p>This is a practice RoR app that will eventually become a blog dedicated to those who want
+            to share their customer service experiences with others.
+        </p>
+    </div>
+    <div class="card container-fluid bg-light text-center text-dark">
+        <div class="card-body"><h2>Articles</h2></div>
+        <div class="card-footer">
+            <ul>
+              <% @articles.each do |article| %>
+                <li class="list-unstyled">
+                  <a href="/articles/<%= article.id %>">
+                    <%= article.title %>
+                </li>
+              <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+
