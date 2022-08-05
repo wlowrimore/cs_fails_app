@@ -5,18 +5,20 @@
             to share their customer service experiences with others.
         </p>
     </div>
-    <div class="card container-fluid bg-light text-center text-dark">
-        <div class="card-body"><h2>Articles</h2></div>
-        <div class="card-footer">
-            <ul>
+    <div class="card bg-light text-center text-light">
+        <div class="card-header bg-secondary"><h2 class="pt-1">Articles</h2></div>
+        <div class="card-body">
+            <ul class="text-start">
               <% @articles.each do |article| %>
-                <li class="list-unstyled">
-                  <a href="/articles/<%= article.id %>">
-                    <%= article.title %>
+                <li class="list-unstyled mt-3">
+                  <%= link_to article.title, article %>
                 </li>
               <% end %>
             </ul>
         </div>
+    </div>
+    <div class="text-start mt-3">
+      <%= link_to "New Article", new_article_path %>
     </div>
 </div>
 
