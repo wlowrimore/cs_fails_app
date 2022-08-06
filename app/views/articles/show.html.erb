@@ -1,4 +1,11 @@
-<div class="container bg-light mt-5 p-5">
+<div class="container bg-light mt-4 p-5">
   <h2><%= @article.title %></h2>
   <p><%= @article.body %></p>
+  <ul class="p-0 mb-0 mt-5">
+    <li class="list-unstyled mt-3"><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li class="list-unstyled mt-3"><%= link_to "Destroy", article_path(@article), data: {
+                                                turbo_method: :delete,
+                                                turbo_confirm: "Are you sure?"
+                                                } %></li>
+  </ul>
 </div>
