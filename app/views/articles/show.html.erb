@@ -1,13 +1,7 @@
 <div class="container bg-light mt-4 p-5">
   <h2><%= @article.title %></h2>
   <p><%= @article.body %></p>
-  <ul class="p-0 mb-0 mt-5">
-    <li class="list-unstyled mt-3"><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li class="list-unstyled mt-3"><%= link_to "Destroy", article_path(@article), data: {
-                                                turbo_method: :delete,
-                                                turbo_confirm: "Are you sure?"
-                                                } %></li>
-  </ul>
+  
 
   <h2>Comments</h2>
   <% @article.comments.each do |comment| %>
@@ -39,4 +33,13 @@
     <%= form.submit %>
   </p>
   <% end %>
+
+  <ul class="p-0 mb-0 mt-5">
+    <li class="list-unstyled mt-3"><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li class="list-unstyled mt-3"><%= link_to "Destroy", article_path(@article), data: {
+                                                turbo_method: :delete,
+                                                turbo_confirm: "Are you sure?"
+                                                } %></li>
+    <li class="list-unstyled mt-3"><%= link_to "Back to Articles", article_path(@article) %></li>
+  </ul>
 </div>
