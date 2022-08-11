@@ -2,19 +2,24 @@
     <%= form_with model: @article do |form| %>
 
     <div class="row my-1 text-start p-2 mx-3">
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+        <% @article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
     </div>
 
     <div class="row my-1 text-start p-2 mx-3">
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% @article.errors.full_messages_for(:body).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %><br>
+        <% @article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div class='row my-1 text-start p-2 mx-3'>
+        <%= form.label :status %><br>
+        <%= form.select :staus, ['public', 'private', 'archived'], selected: 'public' %>
     </div>
 
     <div class="container-fluid my-3 ms-4 pb-3 pl-5 text-start">

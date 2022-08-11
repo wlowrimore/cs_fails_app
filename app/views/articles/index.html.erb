@@ -10,9 +10,11 @@
         <div class="card-body">
             <ul class="text-start">
               <% @articles.each do |article| %>
-                <li class="list-unstyled mt-3">
-                  <%= link_to article.title, article %>
-                </li>
+                <% unless article.archived? %>
+                  <li class="list-unstyled mt-3">
+                    <%= link_to article.title, article %>
+                  </li>
+                <% end %>
               <% end %>
             </ul>
         </div>
