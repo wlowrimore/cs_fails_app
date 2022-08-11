@@ -1,26 +1,20 @@
-<div class="container text-center mt-3">
-    <div class="mt-4 p-5 bg-transparent text-dark">
-        <h1>Nameless App</h1><br>
-        <p>This is a practice RoR app that will eventually become a blog dedicated to those who want
-            to share their customer service experiences with others.
-        </p>
-    </div>
-    <div class="card bg-light text-center text-light">
-        <div class="card-header bg-secondary"><h2 class="pt-1">Articles</h2></div>
-        <div class="card-body">
-            <ul class="text-start">
-              <% @articles.each do |article| %>
-                <% unless article.archived? %>
-                  <li class="list-unstyled mt-3">
-                    <%= link_to article.title, article %>
-                  </li>
-                <% end %>
+<div class="container-fluid text-center main px-5">
+  <div class="card bg-light text-center text-light">
+      <div class="card-header bg-secondary"><h2 class="pt-1">Articles</h2></div>
+      <div class="card-body">
+          <ul class="text-start">
+            <% @articles.each do |article| %>
+              <% unless article.archived? %>
+                <li class="list-unstyled mt-3">
+                  <%= link_to article.title, article %>
+                </li>
               <% end %>
-            </ul>
-        </div>
-    </div>
-    <div class="text-start mt-3">
-      <%= link_to "New Article", new_article_path %>
-    </div>
+            <% end %>
+          </ul>
+      </div>
+  </div>
+  <div class="text-start mt-3">
+    <%= button_to "New Article", new_article_path(@articles), method: :get, class:"myBtn" %>
+  </div>
 </div>
 

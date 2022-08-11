@@ -1,0 +1,53 @@
+.main {
+    padding: 50px;
+    background: #e5f6f6;
+}
+
+.myBtn {
+	background: #fff;
+    color: #000;
+    border: 1px solid #cccbcb;
+    border-radius: 5px;
+	  &:hover {
+		border: solid 1px #fff;
+		cursor: pointer;
+        background: #696a74;
+        color: whitesmoke;
+        transition: .3s;
+    }
+}
+
+.mainNavBtn {
+    color: #000;
+    font-weight: bolder;
+    text-decoration-line: none;
+    margin-right: 6px;
+    &:hover {
+        color: #696a74;
+        border-bottom: 1px solid #696a74;
+    }
+}
+
+.container-fluid a {
+    font-size: 20px;
+    margin-left: 12px;
+    padding: 0 6px;
+    letter-spacing: 1px;
+    &:hover {
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+}
+
+.myBtnWidth {
+    max-width: 150px;
+}
+
+.headsUpNewArticle {
+    width: 40%;
+}
+
+.card-body a {
+    color: darkslateblue;
+    text-decoration-line: none;
+}
