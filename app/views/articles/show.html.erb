@@ -1,20 +1,21 @@
-<div class="container bg-light mt-4 p-5">
-  <h2><%= @article.title %></h2>
+<div class="container-fluid text-center bg-secondary text-light px-5">
+  <h2 class="pt-1"><%= @article.title %></h2>
   <p><%= @article.body %></p>
+</div>
   
-
-  <h2>Comments</h2>
-  <%= render @article.comments %>
+<div class="container-fluid text-center main">
+  <h2>Comments:</h2>
+  <%= render @article.comments %><br>
 
   <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>
-
-  <ul class="p-0 mb-0 mt-5">
-    <li class="list-unstyled mt-3"><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li class="list-unstyled mt-3"><%= link_to "Destroy", article_path(@article), data: {
-                                                turbo_method: :delete,
-                                                turbo_confirm: "Are you sure?"
-                                                } %></li>
-    <li class="list-unstyled mt-3"><%= link_to "Back to Articles", root_path %></li>
+  <%= render 'comments/form' %><br>
+  
+  <ul class="row d-flex justify-content-center px-0 static-links">
+    <li class="col-2 list-unstyled mx-4 p-1 edit"><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li class="col-2 list-unstyled p-1 destroy"><%= link_to "Destroy", article_path(@article), data: {
+                                              turbo_method: :delete,
+                                              turbo_confirm: "Are you sure?"
+                                              } %></li>
+    <li class="col-2 list-unstyled ms-3 p-1 articles"><%= link_to "Articles", root_path %></li>
   </ul>
 </div>
