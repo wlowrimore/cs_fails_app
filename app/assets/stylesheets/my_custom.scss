@@ -52,6 +52,23 @@
     text-decoration-line: none;
 }
 
+.destroyComment a {
+    padding: 0;
+    margin: 0;
+    text-decoration-line: none;
+    color: darkturquoise;
+    &:hover {
+        color: darkslategray;
+        border-bottom: 1px solid darkslategray;
+        padding-bottom: 1px;
+    }
+}
+
+.add-comment-bg {
+    background: #e5f6f6;
+    border: none;
+}
+
 .static-links li {
     width: auto;
 }
