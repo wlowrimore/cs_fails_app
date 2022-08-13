@@ -3,6 +3,25 @@
     background: #e5f6f6;
 }
 
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f4fdfd;
+    border: 1px solid silver;
+    border-radius: 5px;
+    & > h1 {
+        font-size: 12rem;
+        padding-top: 8rem;
+        
+    }
+    & > h5 {
+        letter-spacing: 1px;
+        padding: 0 5rem 8rem 5rem;
+        line-height: 1.4;
+    }
+}
+
 .myBtn {
 	background: #fff;
     color: #000;
