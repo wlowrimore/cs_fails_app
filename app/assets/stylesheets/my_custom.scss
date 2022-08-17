@@ -22,16 +22,16 @@
     }
 }
 
-// .signUpBox {
-    
-//     background: lightcoral;
-    
-// }
-
-// .signUp-form {
-//     color: #000;
-//     padding: 25px;
-// }
+.signUpLink {
+    font-size: 40px;
+    color: #000;
+    text-decoration-line: none;
+    &:hover {
+        color: #696a74;
+        border-bottom: 1px solid #696a74;
+        padding-bottom: 1px;
+    }
+}
 
 .myBtn {
 	background: #fff;
@@ -87,8 +87,6 @@
 
 .myBtnWidth {
     max-width: 150px;
-    padding: 0;
-    margin: 0;
 }
 
 .headsUpNewArticle {
