@@ -22,6 +22,17 @@
     }
 }
 
+.loginLink {
+    font-size: 40px;
+    color: blue;
+    text-decoration-line: none;
+    &:hover {
+        color: #000;
+        border-bottom: 1px solid #000;
+        padding-bottom: 1px;
+    }
+}
+
 .signUpLink {
     font-size: 40px;
     color: #000;

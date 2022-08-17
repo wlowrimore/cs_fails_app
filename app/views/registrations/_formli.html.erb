@@ -1,0 +1,22 @@
+<div class="col">
+    <div class="container form-control">
+      <%= form_with model: @user, url: login_path do |formli| %>
+
+        <div class="col-lg-12 my-5">
+          <p class="row text-start mb-3">
+            <%= formli.label :email %>
+            <%= formli.text_field :email, placeholder: "user@email.com" %>
+          </p>
+        
+          <p class="row text-start mb-3">
+            <%= formli.label :password %>
+            <%= formli.password_field :password, placeholder: "password" %>
+          </p>
+
+          <p class="row text-start mt-2 mb-3">
+            <%= formli.submit "Login", class: "myBtn" %>
+          </p>
+      <% end %>
+        </div>
+    </div>
+</div>
