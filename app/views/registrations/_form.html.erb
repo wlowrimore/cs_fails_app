@@ -1,6 +1,13 @@
 <div class="col">
     <div class="container form-control">
       <%= form_with model: @user, url: sign_up_path do |form| %>
+        <% if @user.errors.any? %>
+          <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+        <% end %>
 
         <div class="col-lg-12 my-5">
           <p class="row text-start mb-3">
