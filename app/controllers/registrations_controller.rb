@@ -6,7 +6,7 @@ class RegistrationsController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to @article, notice: "Successfully created account"
+            redirect_to articles_path, notice: "Successfully created account"
         else
             render :new, status: :unprocessable_entity
         end    

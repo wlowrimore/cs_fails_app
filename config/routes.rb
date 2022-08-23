@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
-  # get "login", to: "registrations#login"
+  get "login", to: "registrations#login"
   # post "login", to: "registrations#login"
   # post "logout", to: "sessions#destroy"
   # get "logout", to: 'sessions#destroy"'
