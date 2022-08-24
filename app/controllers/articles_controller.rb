@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   except: [:index, :show]
 
   def index
+     
     @articles = Article.all
   end
 

@@ -2,15 +2,15 @@
   <div class="card bg-light text-center text-light">
       <div class="card-header bg-secondary"><h2 class="pt-1">Articles</h2></div>
       <div class="card-body">
-          <ul class="text-start">
-            <% @articles.each do |article| %>
-              <% unless article.archived? %>
-                <li class="list-unstyled mt-3">
-                  <%= link_to article.title, article %>
-                </li>
-              <% end %>
+        <ul class="text-start">
+          <% @articles.each do |article| %>
+            <% unless article.archived? %>
+              <li class="list-unstyled mt-3">
+                <%= link_to article.title, article %>
+              </li>
             <% end %>
-          </ul>
+          <% end %>
+        </ul>
       </div>
   </div>
   <div class="mt-3">
